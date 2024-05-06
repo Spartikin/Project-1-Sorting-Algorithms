@@ -38,7 +38,7 @@ public class main {
 	        return title + " by " + author + " (Edition: " + edition + ")";
 	    }
 	    
-	    // Book hashcode()
+	    // Book hashCode()
 	    @Override
 	    public int hashCode() {
 	        return Objects.hash(title, edition);
@@ -54,8 +54,6 @@ public class main {
 	    }
 	    
 	}
-
-	
 	
 	// Class for Multimedia
 	static class Multimedia {
@@ -101,7 +99,8 @@ public class main {
 	}
 	
 	// Class for Library
-	class Library {
+	class Library <T> {
+		private List<T> Library;
 	}
 
 	public static void main(String[] args) {
