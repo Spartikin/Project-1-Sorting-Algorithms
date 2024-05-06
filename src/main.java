@@ -100,7 +100,12 @@ public class main {
 	
 	// Class for Library
 	class Library <T> {
-		private List<T> Library;
+		private List<T> library;
+		
+	    // Library Constructor
+	    public Library() {
+	        this.library = new ArrayList<>();
+	    }
 	}
 
 	public static void main(String[] args) {
