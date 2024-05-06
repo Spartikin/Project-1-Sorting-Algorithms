@@ -14,8 +14,10 @@ import java.util.*;
 
 public class main {
 	
-	// Enum for ratings
-	// Used by Book & Multimedia
+    /**
+     * Rating for Book/Multimedia.
+     * Can be G, PG, PG_13, R
+     */
 	enum Rating {
 	    G,
 	    PG,
@@ -23,7 +25,9 @@ public class main {
 	    R
 	}
 	
-	// Class for Book
+    /**
+     * Book object.
+     */
 	static class Book {
 	    private String title;
 	    private String author;
@@ -33,7 +37,16 @@ public class main {
 	    private int edition;
 	    private Rating rating;
 	    
-	    // Book Constructor
+        /**
+         * Constructs a Book object.
+         * @param title The title of the book.
+         * @param author The author of the book.
+         * @param genre The genre of the book.
+         * @param pageCount The page count of the book.
+         * @param publicationYear The publication year of the book.
+         * @param edition The edition of the book.
+         * @param rating The rating of the book.
+         */
 	    public Book(String title, String author, String genre, int pageCount, int publicationYear, int edition, Rating rating) {
 	        this.title = title;
 	        this.author = author;
@@ -44,19 +57,29 @@ public class main {
 	        this.rating = rating;
 	    }
 	    
-	    // Book toString()
+	    /**
+	     * Book toString().
+	     * @return String of title, author & edition
+	     */
 	    @Override
 	    public String toString() {
 	        return title + " by " + author + " (Edition: " + edition + ")";
 	    }
 	    
-	    // Book hashCode()
+	    /**
+	     * Book hashCode().
+	     * @return hash of this.title & this.edition.
+	     */
 	    @Override
 	    public int hashCode() {
 	        return Objects.hash(title, edition);
 	    }
 	    
-	    // Book equals()
+	    /**
+	     * Book equals().
+	     * @param obj book object to compare.
+	     * @return True is equals, false is not equal
+	     */
 	    @Override
 	    public boolean equals(Object obj) {
 	        if (this == obj) return true;
@@ -65,22 +88,34 @@ public class main {
 	        return this.title.equals(other.title) && this.edition == other.edition;
 	    }
 	    
-	    // return title
+	    /**
+	     * Book getTitle()
+	     * @return String title
+	     */
 	    public String getTitle() {
 	        return title;
 	    }
 	    
-	    // return edition
+	    /**
+	     * Book getEdition()
+	     * @return int edition
+	     */
 	    public int getEdition() {
 	        return edition;
 	    }
 	    
-	    // return author
+	    /**
+	     * Book getAuthor()
+	     * @return String author
+	     */
 	    public String getAuthor() {
 	        return author;
 	    }
 	    
-	    // return rating
+	    /**
+	     * Book getRating()
+	     * @return Rating rating
+	     */
 	    public Rating getRating() {
 	        return rating;
 	    }
@@ -97,7 +132,16 @@ public class main {
 	    private int edition;
 	    private Rating rating;
 	    
-	    // Multimedia Constructor
+        /**
+         * Constructs a Multimedia object.
+         * @param title The title of the media.
+         * @param authorPublisher The author/publisher of the media.
+         * @param type The type of the media.
+         * @param lengthDuration The length of the media.
+         * @param publicationYear The publication year of the media.
+         * @param edition The edition of the media.
+         * @param rating The rating of the media.
+         */
 	    public Multimedia(String title, String authorPublisher, String type, String lengthDuration, int publicationYear, int edition, Rating rating) {
 	        this.title = title;
 	        this.authorPublisher = authorPublisher;
