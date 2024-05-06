@@ -44,6 +44,15 @@ public class main {
 	        return Objects.hash(title, edition);
 	    }
 	    
+	    // Book equals()
+	    @Override
+	    public boolean equals(Object obj) {
+	        if (this == obj) return true;
+	        if (!(obj instanceof Book)) return false;
+	        Book other = (Book) obj;
+	        return this.title.equals(other.title) && this.edition == other.edition;
+	    }
+	    
 	}
 
 	
