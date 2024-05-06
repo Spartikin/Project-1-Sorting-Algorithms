@@ -182,6 +182,46 @@ public class main {
 	        }
 	    }
 	    
+        // Sort library by lexicographical title, then by edition
+        public void sortLexicographicalOrder() {
+            Collections.sort(library, new Comparator<T>() {
+                @Override
+                public int compare(T item1, T item2) {
+                    String title1, title2;
+                    int edition1, edition2;
+                    
+                    if (item1 instanceof Book) {
+                        Book book1 = (Book) item1;
+                        title1 = book1.getTitle();
+                        edition1 = book1.getEdition();
+                    } else {
+                        Multimedia multimedia1 = (Multimedia) item1;
+                        title1 = multimedia1.getTitle();
+                        edition1 = multimedia1.getEdition();
+                    }
+                    
+                    if (item2 instanceof Book) {
+                        Book book2 = (Book) item2;
+                        title2 = book2.getTitle();
+                        edition2 = book2.getEdition();
+                    } else {
+                        Multimedia multimedia2 = (Multimedia) item2;
+                        title2 = multimedia2.getTitle();
+                        edition2 = multimedia2.getEdition();
+                    }
+                    
+                    // First, compare titles lexicographically
+                    int titleComparison = title1.compareTo(title2);
+                    if (titleComparison != 0) {
+                        return titleComparison;
+                    }
+                    
+                    // If titles are equal, compare editions
+                    return Integer.compare(edition1, edition2);
+                }
+            });
+        }
+	    
 	}
 
 	public static void main(String[] args) {
@@ -196,6 +236,7 @@ public class main {
 		library.addItem(Book1);
 		library.addItem(M1);
 		library.searchLibraryByTitle("bobby");
+		library.sortLexicographicalOrder();
 	}
 
 }
