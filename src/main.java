@@ -1,3 +1,15 @@
+/**
+File: main.java
+Description: Allows for the creation and sorting of a library, consisting of books and multimedia items.
+Author: Nicholas Tripodi-Baslis
+Student ID: 110316926
+Email ID: triny012
+AI Tool Used: Y (This includes all AI Tools e.g. ChatGPT, Microsoft or Github Copiliot etc... Please leave blank if you do not wish to share this information)
+This is my own work as defined by
+the University's Academic Integrity Policy.
+**/
+
+
 import java.util.*;
 
 public class main {
