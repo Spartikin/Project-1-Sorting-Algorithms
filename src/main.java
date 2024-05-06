@@ -122,7 +122,9 @@ public class main {
 	    
 	}
 	
-	// Class for Multimedia
+    /**
+     * Multimedia object.
+     */
 	static class Multimedia {
 	    private String title;
 	    private String authorPublisher;
@@ -152,19 +154,29 @@ public class main {
 	        this.rating = rating;
 	    }
 	    
-	    // Multimedia toString()
+	    /**
+	     * Multimedia toString().
+	     * @return String of title, authorPublisher & edition
+	     */
 	    @Override
 	    public String toString() {
 	        return title + " by " + authorPublisher + " (Edition: " + edition + ")";
 	    }
 	    
-	    // Multimedia hashCode()
+	    /**
+	     * Multimedia hashCode().
+	     * @return hash of this.title & this.edition.
+	     */
 	    @Override
 	    public int hashCode() {
 	        return Objects.hash(title, edition);
 	    }
 	    
-	    // Multimedia equals()
+	    /**
+	     * Multimedia equals().
+	     * @param obj Multimedia object to compare.
+	     * @return True is equals, false is not equal
+	     */
 	    @Override
 	    public boolean equals(Object obj) {
 	        if (this == obj) return true;
@@ -173,22 +185,34 @@ public class main {
 	        return this.title.equals(other.title) && this.edition == other.edition;
 	    }
 	    
-	    // return title
+	    /**
+	     * Multimedia getTitle()
+	     * @return String title
+	     */
 	    public String getTitle() {
 	        return title;
 	    }
 	    
-	    // return edition
+	    /**
+	     * Multimedia getEdition()
+	     * @return int edition
+	     */
 	    public int getEdition() {
 	        return edition;
 	    }
 	    
-	    // return author
+	    /**
+	     * Multimedia getAuthor()
+	     * @return String author
+	     */
 	    public String getAuthor() {
 	        return authorPublisher;
 	    }
 	    
-	    // return rating
+	    /**
+	     * Multimedia getRating()
+	     * @return Rating rating
+	     */
 	    public Rating getRating() {
 	        return rating;
 	    }
