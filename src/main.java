@@ -27,7 +27,7 @@ public class main {
 	
 	
 	// Class for Multimedia
-	class Multimedia {
+	static class Multimedia {
 	    private String title;
 	    private String authorPublisher;
 	    private String type;
@@ -35,6 +35,17 @@ public class main {
 	    private int publicationYear;
 	    private int edition;
 	    private String rating;
+	    
+	    // Multimedia Constructor
+	    public Multimedia(String title, String authorPublisher, String type, String lengthDuration, int publicationYear, int edition, String rating) {
+	        this.title = title;
+	        this.authorPublisher = authorPublisher;
+	        this.type = type;
+	        this.lengthDuration = lengthDuration;
+	        this.publicationYear = publicationYear;
+	        this.edition = edition;
+	        this.rating = rating;
+	    }
 	}
 	
 	// Class for Library
@@ -44,6 +55,8 @@ public class main {
 	public static void main(String[] args) {
 		Book Book1 = new Book("bob", "james", "Crime", 3, 434, 4343, "Tim");
 		System.out.println(Book1.author);
+		Multimedia M1 = new Multimedia("bob", "james", "Crime", "3", 434, 4343, "Tim");
+		System.out.println(M1.authorPublisher);
 	}
 
 }
