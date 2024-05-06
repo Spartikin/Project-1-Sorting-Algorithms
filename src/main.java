@@ -70,6 +70,11 @@ public class main {
 	        return title;
 	    }
 	    
+	    // return edition
+	    public int getEdition() {
+	        return edition;
+	    }
+	    
 	}
 	
 	// Class for Multimedia
