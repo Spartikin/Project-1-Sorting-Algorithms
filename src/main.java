@@ -218,21 +218,33 @@ public class main {
 	    }
 	}
 	
-	// Class for Library
+    /**
+     * Multimedia object.
+     */
 	static class Library <T> {
 		private List<T> library;
 		
-	    // Library Constructor
+        /**
+         * Constructs a Library object.
+         * this.library = ArrayList of T generics. Allows for book & Multimedia items to be placed in same list, and be compared.
+         */
 	    public Library() {
 	        this.library = new ArrayList<>();
 	    }
 	    
-	    // Library add item function
+	    /**
+	     * Library addItem(). Adds parameter to library list.
+	     * @param Book/Multimedia item.
+	     */
 	    public void addItem(T item) {
 	        library.add(item);
 	    }
 	    
-	    // search library by string, compare to item string
+	    /**
+	     * Library searchLibraryByTitle()
+	     * @param keyword String of what word will be compared to library titles
+	     * Will print Matching Items:, followed by toString() of each book/Multimedia item that has same title as keyword param.
+	     */
 	    public void searchLibraryByTitle(String keyword) {
 	        System.out.println("Matching Items:");
 	        for (T item : library) {
@@ -250,7 +262,10 @@ public class main {
 	        }
 	    }
 	    
-        // Sort library by lexicographical title, then by edition
+	    /**
+	     * Library sortLexicographicalOrder()
+	     * Will sort library lexicographically by title, then by edition
+	     */
         public void sortLexicographicalOrder() {
             Collections.sort(library, new Comparator<T>() {
                 @Override
@@ -288,7 +303,10 @@ public class main {
                     return Integer.compare(edition1, edition2);
                 }
                 
-                // Sort library by reverse lexicographical author, then rating
+        	    /**
+        	     * Library sortReverseLexicographicalOrder()
+        	     * Will sort library reverse lexicographically by author, then by rating
+        	     */
                 public void sortReverseLexicographicalOrder() {
                     Collections.sort(library, new Comparator<T>() {
                         @Override
