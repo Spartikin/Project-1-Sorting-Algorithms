@@ -80,6 +80,11 @@ public class main {
 	        return author;
 	    }
 	    
+	    // return rating
+	    public Rating getRating() {
+	        return rating;
+	    }
+	    
 	}
 	
 	// Class for Multimedia
