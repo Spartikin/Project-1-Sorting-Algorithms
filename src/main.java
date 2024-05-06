@@ -69,11 +69,17 @@ public class main {
 	        this.rating = rating;
 	    }
 	    
+	    // Multimedia toString()
 	    @Override
 	    public String toString() {
 	        return title + " by " + authorPublisher + " (Edition: " + edition + ")";
 	    }
 	    
+	    // Multimedia hashCode()
+	    @Override
+	    public int hashCode() {
+	        return Objects.hash(title, edition);
+	    }
 	}
 	
 	// Class for Library
