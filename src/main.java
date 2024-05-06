@@ -128,6 +128,26 @@ public class main {
 	        Multimedia other = (Multimedia) obj;
 	        return this.title.equals(other.title) && this.edition == other.edition;
 	    }
+	    
+	    // return title
+	    public String getTitle() {
+	        return title;
+	    }
+	    
+	    // return edition
+	    public int getEdition() {
+	        return edition;
+	    }
+	    
+	    // return author
+	    public String getAuthor() {
+	        return authorPublisher;
+	    }
+	    
+	    // return rating
+	    public Rating getRating() {
+	        return rating;
+	    }
 	}
 	
 	// Class for Library
