@@ -32,9 +32,16 @@ public class main {
 	        this.rating = rating;
 	    }
 	    
+	    // Book toString()
 	    @Override
 	    public String toString() {
 	        return title + " by " + author + " (Edition: " + edition + ")";
+	    }
+	    
+	    // Book hashcode()
+	    @Override
+	    public int hashCode() {
+	        return Objects.hash(title, edition);
 	    }
 	    
 	}
