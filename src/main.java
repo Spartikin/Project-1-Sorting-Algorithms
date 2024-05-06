@@ -31,6 +31,12 @@ public class main {
 	        this.edition = edition;
 	        this.rating = rating;
 	    }
+	    
+	    @Override
+	    public String toString() {
+	        return title + " by " + author + " (Edition: " + edition + ")";
+	    }
+	    
 	}
 
 	
@@ -66,6 +72,7 @@ public class main {
 		System.out.println(Book1.author);
 		Multimedia M1 = new Multimedia("bob", "james", "Crime", "3", 434, 4343, Rating.PG);
 		System.out.println(M1.authorPublisher);
+		System.out.println(Book1.toString());
 	}
 
 }
