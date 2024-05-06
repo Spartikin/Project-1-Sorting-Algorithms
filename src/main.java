@@ -106,6 +106,11 @@ public class main {
 	    public Library() {
 	        this.library = new ArrayList<>();
 	    }
+	    
+	    // Library add item function
+	    public void addItem(T item) {
+	        library.add(item);
+	    }
 	}
 
 	public static void main(String[] args) {
