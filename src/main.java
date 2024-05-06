@@ -65,6 +65,11 @@ public class main {
 	        return this.title.equals(other.title) && this.edition == other.edition;
 	    }
 	    
+	    // return title
+	    public String getTitle() {
+	        return title;
+	    }
+	    
 	}
 	
 	// Class for Multimedia
@@ -123,6 +128,8 @@ public class main {
 	    public void addItem(T item) {
 	        library.add(item);
 	    }
+	    
+	    
 	}
 
 	public static void main(String[] args) {
