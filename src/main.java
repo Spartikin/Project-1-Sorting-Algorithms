@@ -89,6 +89,15 @@ public class main {
 	    public int hashCode() {
 	        return Objects.hash(title, edition);
 	    }
+	    
+	    // Multimedia equals()
+	    @Override
+	    public boolean equals(Object obj) {
+	        if (this == obj) return true;
+	        if (!(obj instanceof Multimedia)) return false;
+	        Multimedia other = (Multimedia) obj;
+	        return this.title.equals(other.title) && this.edition == other.edition;
+	    }
 	}
 	
 	// Class for Library
