@@ -219,10 +219,51 @@ public class main {
                     // If titles are equal, compare editions
                     return Integer.compare(edition1, edition2);
                 }
+                
+                // Sort library by reverse lexicographical author, then rating
+                public void sortReverseLexicographicalOrder() {
+                    Collections.sort(library, new Comparator<T>() {
+                        @Override
+                        public int compare(T item1, T item2) {
+                            String author1, author2;
+                            Rating rating1, rating2;
+                            
+                            if (item1 instanceof Book) {
+                                Book book1 = (Book) item1;
+                                author1 = book1.getAuthor();
+                                rating1 = book1.getRating();
+                            } else {
+                                Multimedia multimedia1 = (Multimedia) item1;
+                                author1 = multimedia1.getAuthor();
+                                rating1 = multimedia1.getRating();
+                            }
+                            
+                            if (item2 instanceof Book) {
+                                Book book2 = (Book) item2;
+                                author2 = book2.getAuthor();
+                                rating2 = book2.getRating();
+                            } else {
+                                Multimedia multimedia2 = (Multimedia) item2;
+                                author2 = multimedia2.getAuthor();
+                                rating2 = multimedia2.getRating();
+                            }
+                            
+                            // First, compare authors in reverse lexicographical order
+                            int authorComparison = author2.compareTo(author1);
+                            if (authorComparison != 0) {
+                                return authorComparison;
+                            }
+                            
+                            // If authors are equal, compare ratings
+                            return rating1.compareTo(rating2);
+                        }
+                    });
+                }
             });
         }
 	    
 	}
+	
 
 	public static void main(String[] args) {
 		Book Book1 = new Book("bob", "james", "Crime", 3, 434, 4343, Rating.PG_13);
