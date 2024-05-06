@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class main {
 	
@@ -11,7 +12,7 @@ public class main {
 	    private int edition;
 	    private String rating;
 	    
-	    // Constructor
+	    // Book Constructor
 	    public Book(String title, String author, String genre, int pageCount, int publicationYear, int edition, String rating) {
 	        this.title = title;
 	        this.author = author;
@@ -27,6 +28,13 @@ public class main {
 	
 	// Class for Multimedia
 	class Multimedia {
+	    private String title;
+	    private String authorPublisher;
+	    private String type;
+	    private String lengthDuration;
+	    private int publicationYear;
+	    private int edition;
+	    private String rating;
 	}
 	
 	// Class for Library
