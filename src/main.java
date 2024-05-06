@@ -75,6 +75,11 @@ public class main {
 	        return edition;
 	    }
 	    
+	    // return author
+	    public String getAuthor() {
+	        return author;
+	    }
+	    
 	}
 	
 	// Class for Multimedia
