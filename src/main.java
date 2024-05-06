@@ -2,7 +2,7 @@
 public class main {
 	
 	// Class for Book
-	class Book {
+	static class Book {
 	    private String title;
 	    private String author;
 	    private String genre;
@@ -10,7 +10,20 @@ public class main {
 	    private int publicationYear;
 	    private int edition;
 	    private String rating;
+	    
+	    // Constructor
+	    public Book(String title, String author, String genre, int pageCount, int publicationYear, int edition, String rating) {
+	        this.title = title;
+	        this.author = author;
+	        this.genre = genre;
+	        this.pageCount = pageCount;
+	        this.publicationYear = publicationYear;
+	        this.edition = edition;
+	        this.rating = rating;
+	    }
 	}
+
+	
 	
 	// Class for Multimedia
 	class Multimedia {
@@ -21,7 +34,8 @@ public class main {
 	}
 
 	public static void main(String[] args) {
-		
+		Book Book1 = new Book("bob", "james", "Crime", 3, 434, 4343, "Tim");
+		System.out.println(Book1.author);
 	}
 
 }
