@@ -151,7 +151,7 @@ public class main {
 	}
 	
 	// Class for Library
-	class Library <T> {
+	static class Library <T> {
 		private List<T> library;
 		
 	    // Library Constructor
@@ -164,16 +164,38 @@ public class main {
 	        library.add(item);
 	    }
 	    
+	    // search library by string, compare to item string
+	    public void searchLibraryByTitle(String keyword) {
+	        System.out.println("Matching Items:");
+	        for (T item : library) {
+	            if (item instanceof Book) {
+	                Book book = (Book) item;
+	                if (book.getTitle().toLowerCase().startsWith(keyword.toLowerCase())) {
+	                    System.out.println(book);
+	                }
+	            } else if (item instanceof Multimedia) {
+	                Multimedia multimedia = (Multimedia) item;
+	                if (multimedia.getTitle().toLowerCase().startsWith(keyword.toLowerCase())) {
+	                    System.out.println(multimedia);
+	                }
+	            }
+	        }
+	    }
 	    
 	}
 
 	public static void main(String[] args) {
 		Book Book1 = new Book("bob", "james", "Crime", 3, 434, 4343, Rating.PG_13);
 		System.out.println(Book1.author);
-		Multimedia M1 = new Multimedia("bob", "james", "Crime", "3", 434, 4343, Rating.PG);
+		Multimedia M1 = new Multimedia("bobby", "james", "Crime", "3", 434, 4343, Rating.PG);
 		System.out.println(M1.authorPublisher);
 		System.out.println(Book1.toString());
 		System.out.println(M1.toString());
+		
+		Library library = new Library();
+		library.addItem(Book1);
+		library.addItem(M1);
+		library.searchLibraryByTitle("bobby");
 	}
 
 }
